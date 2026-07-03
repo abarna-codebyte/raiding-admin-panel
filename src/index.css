@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Neutrals */
+  --color-bg: #f5f5f3;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f9f9f7;
+  --color-surface-hover: #fafaf8;
+  --color-border: #e5e5e0;
+  --color-border-soft: #eeeee8;
+  --color-border-faint: #f5f5f0;
+  --color-text: #1a1a18;
+  --color-text-secondary: #444441;
+  --color-text-muted: #888780;
+  --color-text-faint: #b4b2a9;
+
+  /* Teal — primary */
+  --color-teal-50: #e1f5ee;
+  --color-teal-100: #9fe1cb;
+  --color-teal-200: #5dcaa5;
+  --color-teal-400: #1d9e75;
+  --color-teal-600: #0f6e56;
+  --color-teal-800: #085041;
+  --color-teal-900: #04342c;
+
+  /* Amber — warning/pending */
+  --color-amber-50: #faeeda;
+  --color-amber-100: #fac775;
+  --color-amber-200: #ef9f27;
+  --color-amber-400: #ba7517;
+  --color-amber-600: #854f0b;
+  --color-amber-800: #633806;
+  --color-amber-900: #412402;
+
+  /* Indigo — customers/analytics accent */
+  --color-indigo-50: #eeedfe;
+  --color-indigo-100: #cecbf6;
+  --color-indigo-200: #afa9ec;
+  --color-indigo-400: #7f77dd;
+  --color-indigo-600: #534ab7;
+  --color-indigo-800: #3c3489;
+  --color-indigo-900: #26215c;
+
+  /* Slate — neutral/offline */
+  --color-slate-50: #f1efe8;
+  --color-slate-100: #d3d1c7;
+  --color-slate-200: #b4b2a9;
+  --color-slate-400: #888780;
+  --color-slate-600: #5f5e5a;
+  --color-slate-800: #444441;
+  --color-slate-900: #2c2c2a;
+
+  /* Blue — info/operations */
+  --color-blue-50: #e6f1fb;
+  --color-blue-100: #b5d4f4;
+  --color-blue-200: #85b7eb;
+  --color-blue-400: #378add;
+  --color-blue-600: #185fa5;
+  --color-blue-800: #0c447c;
+  --color-blue-900: #042c53;
+
+  /* Forest — finance */
+  --color-forest-50: #eaf3de;
+  --color-forest-100: #c0dd97;
+  --color-forest-200: #97c459;
+  --color-forest-400: #639922;
+  --color-forest-600: #3b6d11;
+  --color-forest-800: #27500a;
+  --color-forest-900: #173404;
+
+  /* Coral — fraud/risk accent */
+  --color-coral-50: #faece7;
+  --color-coral-100: #f5c4b3;
+  --color-coral-200: #f0997b;
+  --color-coral-400: #d85a30;
+  --color-coral-600: #993c1d;
+  --color-coral-800: #712b13;
+  --color-coral-900: #4a1b0c;
+
+  /* Rose — danger/SOS/errors */
+  --color-rose-50: #fcebeb;
+  --color-rose-100: #f7c1c1;
+  --color-rose-200: #f09595;
+  --color-rose-400: #e24b4a;
+  --color-rose-600: #a32d2d;
+  --color-rose-800: #791f1f;
+  --color-rose-900: #501313;
+
+  /* Pink — marketing accent */
+  --color-pink-600: #993556;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border-soft);
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--color-slate-100);
+    border-radius: 3px;
+  }
+}
