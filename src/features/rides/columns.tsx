@@ -29,6 +29,7 @@ export const ridesColumns: ColumnDef<Ride, any>[] = [
     header: 'Route',
     cell: (info) => <span className="text-[12px] text-[var(--color-text-muted)]">{info.getValue() as string}</span>,
   },
+  { accessorKey: 'city', header: 'City' },
   { accessorKey: 'distanceKm', header: 'Distance', cell: (info) => `${info.getValue()} km` },
   { accessorKey: 'fare', header: 'Fare', cell: (info) => <span className="font-medium">{formatCurrency(info.getValue() as number)}</span> },
   {
