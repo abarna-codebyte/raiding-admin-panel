@@ -29,9 +29,10 @@ export default function RidesPage() {
         r.customer.toLowerCase().includes(search.toLowerCase()) ||
         r.driver.toLowerCase().includes(search.toLowerCase())
       const matchesStatus = status === 'all' || r.status === status
-      return matchesSearch && matchesStatus
+      const matchesCity = city === 'all' || r.city === city
+      return matchesSearch && matchesStatus && matchesCity
     })
-  }, [rides, search, status])
+  }, [rides, search, status, city])
 
   return (
     <div>
